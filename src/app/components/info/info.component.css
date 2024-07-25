@@ -1,0 +1,51 @@
+.table {
+  width: 100%;
+  height: min-content;
+}
+
+.mat-column-position {
+  border-right: 1px solid currentColor;
+  text-align: center;
+}
+
+.mat-column-name {
+  text-align: center;
+  font-size: 20px;
+}
+
+.mat-column-weight {
+  text-align: center;
+  font-style: italic;
+}
+
+.mat-column-symbol {
+  text-align: center;
+  font-weight: bold;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: currentColor;
+}
+
+.paginator {
+  display: flex;
+  flex-direction: row;
+  flex-flow: nowrap;
+  align-items: center;
+  justify-content: end;
+  margin: 10px 0;
+}
+
+.paginator > section {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+mat-form-field {
+  height: min-content;
+}

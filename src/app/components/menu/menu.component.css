@@ -1,0 +1,48 @@
+mat-drawer-content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  flex-direction: column;
+  height: 82vh;
+}
+
+mat-drawer {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-drawer > div {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item {
+  width: 100%;
+  background-color: inherit;
+  margin-top: 5px;
+}
+
+.menu-item:hover {
+  background-color: #b3b4bd;
+}
+
+.date_time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  height: 80%;
+}
+
+.date_time > p {
+  padding: 5px;
+  margin: 0;
+}

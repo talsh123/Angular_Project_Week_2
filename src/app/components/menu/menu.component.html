@@ -1,0 +1,22 @@
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+  <mat-drawer #drawer [opened]="NavBarOpen" [mode]="'side'">
+    <button (click)="onPressMenuItem('home')" class="menu-item">
+      <p>Home</p>
+    </button>
+    <button (click)="onPressMenuItem('info')" id="info" class="menu-item">
+      <p>Info</p>
+    </button>
+    <button (click)="onPressMenuItem('about')" id="about" class="menu-item">
+      <p>About</p>
+    </button>
+    <div class="date_time">
+      <p class="date">
+        {{ getCalenderService().getCalenderInfo() | date : "medium" }}
+      </p>
+      <p class="time"></p>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet />
+  </mat-drawer-content>
+</mat-drawer-container>
