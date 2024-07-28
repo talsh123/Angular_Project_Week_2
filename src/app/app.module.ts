@@ -15,6 +15,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatInputModule } from '@angular/material/input';
 
 // Component imports
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { InfoComponent } from './components/info/info.component';
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 
 // Angular Imports
 import { NgFor } from '@angular/common';
@@ -44,6 +46,7 @@ import { provideHttpClient } from '@angular/common/http';
     InfoComponent,
     AboutComponent,
     HomeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,6 +64,7 @@ import { provideHttpClient } from '@angular/common/http';
     MatTableModule,
     MatPaginatorModule,
     NgFor,
+    MatInputModule,
     RouterModule.forRoot(routes),
   ],
   bootstrap: [AppComponent],

@@ -1,5 +1,8 @@
 <mat-drawer-container class="example-container" [hasBackdrop]="true">
   <mat-drawer #drawer [opened]="NavBarOpen" [mode]="'side'">
+    <button (click)="onPressMenuItem('login')" id="login" class="menu-item">
+      <p>Login</p>
+    </button>
     <button (click)="onPressMenuItem('home')" class="menu-item">
       <p>Home</p>
     </button>
