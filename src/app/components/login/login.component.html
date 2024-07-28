@@ -1,14 +1,30 @@
-<form class="form">
+<form
+  *ngIf="loggedIn == false; else fallback"
+  [formGroup]="loginForm"
+  (ngSubmit)="onSubmit()"
+>
   <p>
     <mat-form-field appearance="outline">
       <mat-label>Username</mat-label>
-      <input matInput placeholder="Placeholder" />
+      <input
+        type="text"
+        matInput
+        formControlName="username"
+        placeholder="Enter your username"
+        required
+      />
     </mat-form-field>
   </p>
   <p>
     <mat-form-field appearance="outline">
-      <mat-label>Enter your password</mat-label>
-      <input matInput [type]="hide() ? 'password' : 'text'" />
+      <mat-label for="password">Enter your password</mat-label>
+      <input
+        type="text"
+        formControlName="password"
+        required
+        matInput
+        [type]="hide() ? 'password' : 'text'"
+      />
       <button
         mat-icon-button
         matSuffix
@@ -23,9 +39,9 @@
       >
     </mat-form-field>
   </p>
-  <section class="submit">
-    <div class="example-button-row">
-      <button mat-flat-button>Basic</button>
-    </div>
-  </section>
+  <button type="submit" mat-flat-button>Submit</button>
 </form>
+
+<ng-template #fallback>
+  <p>You are already logged in</p>
+</ng-template>

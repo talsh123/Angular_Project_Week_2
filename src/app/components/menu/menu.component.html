@@ -6,18 +6,20 @@
     <button (click)="onPressMenuItem('home')" class="menu-item">
       <p>Home</p>
     </button>
-    <button (click)="onPressMenuItem('info')" id="info" class="menu-item">
+    <button
+      *ngIf="loggedIn == true"
+      (click)="onPressMenuItem('info')"
+      id="info"
+      class="menu-item"
+    >
       <p>Info</p>
     </button>
     <button (click)="onPressMenuItem('about')" id="about" class="menu-item">
       <p>About</p>
     </button>
-    <div class="date_time">
-      <p class="date">
-        {{ getCalenderService().getCalenderInfo() | date : "medium" }}
-      </p>
-      <p class="time"></p>
-    </div>
+    <span class="date_time">
+      {{ getCalenderService().getCalenderInfo() | date : "medium" }}
+    </span>
   </mat-drawer>
   <mat-drawer-content>
     <router-outlet />

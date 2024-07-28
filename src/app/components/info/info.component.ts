@@ -1,15 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import {
-  Column,
-  DataService,
-  PeriodicElement,
-} from '../../services/data.service';
+import { DataService, PeriodicElement } from '../../services/data.service';
 
 @Component({
   selector: 'app-info',
   templateUrl: './info.component.html',
-  styleUrl: './info.component.css',
+  styleUrls: ['./info.component.css'],
 })
 export class InfoComponent implements OnInit {
   tableData: PeriodicElement[] = [];

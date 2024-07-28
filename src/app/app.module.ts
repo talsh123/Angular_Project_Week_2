@@ -16,6 +16,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
+import { MatFormField } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Component imports
 import { AppComponent } from './app.component';
@@ -65,6 +67,8 @@ import { provideHttpClient } from '@angular/common/http';
     MatPaginatorModule,
     NgFor,
     MatInputModule,
+    MatFormField,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes),
   ],
   bootstrap: [AppComponent],
