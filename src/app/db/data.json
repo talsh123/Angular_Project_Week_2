@@ -1,5 +1,10 @@
 {
-  "columns": ["position", "name", "weight", "symbol"],
+  "columns": [
+    { "name": "position" },
+    { "name": "name" },
+    { "name": "weight" },
+    { "name": "symbol" }
+  ],
   "tableData": [
     { "position": 1, "name": "Hydrogen", "weight": 1.0079, "symbol": "H" },
     { "position": 2, "name": "Helium", "weight": 4.0026, "symbol": "He" },

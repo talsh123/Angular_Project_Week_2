@@ -1,9 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 export interface Column {
-  position: number;
   name: string;
 }
 

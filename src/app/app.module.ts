@@ -25,6 +25,9 @@ import { InfoComponent } from './components/info/info.component';
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 
+// Angular Imports
+import { NgFor } from '@angular/common';
+
 // Router imports
 import { RouterOutlet, RouterModule } from '@angular/router';
 import { routes } from './app.routes';
@@ -57,6 +60,7 @@ import { provideHttpClient } from '@angular/common/http';
     RouterOutlet,
     MatTableModule,
     MatPaginatorModule,
+    NgFor,
     RouterModule.forRoot(routes),
   ],
   bootstrap: [AppComponent],

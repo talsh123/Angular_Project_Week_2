@@ -14,7 +14,7 @@ import {
 export class InfoComponent implements OnInit {
   tableData: PeriodicElement[] = [];
   showingData: PeriodicElement[] = [];
-  columns: Column[] = [];
+  columns: String[] = [];
 
   // Pagination variables
   steps: string = '';
@@ -27,7 +27,9 @@ export class InfoComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getColumns().subscribe({
       next: (res) => {
-        this.columns = res;
+        res.forEach((columnObject) => {
+          this.columns.push(columnObject.name);
+        });
       },
     });
 
